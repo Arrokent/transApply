@@ -1,0 +1,186 @@
+
+	{
+		"id": 1,
+		"course_id": 107032030,
+		"course_name": "思想道德修养与法律基础",
+		"course_dpt": "马克思主义学院",
+		"score": 3,
+		"term": "1 秋"
+	}
+	{
+		"id": 2,
+		"course_id": 107115000,
+		"course_name": "形势与政策-1",
+		"course_dpt": "马克思主义学院",
+		"score": 0,
+		"term": "1 秋"
+	}
+	{
+		"id": 3,
+		"course_id": 105366020,
+		"course_name": "大学英语(综合)-1",
+		"course_dpt": "外国语学院",
+		"score": 2,
+		"term": "1 秋"
+	}
+	{
+		"id": 4,
+		"course_id": 105367010,
+		"course_name": "大学英语(语)-1",
+		"course_dpt": "外国语学院",
+		"score": 1,
+		"term": "1 秋"
+	}
+	{
+		"id": 5,
+		"course_id": 888004010,
+		"course_name": "体育-1",
+		"course_dpt": "体育学院",
+		"score": 1,
+		"term": "1 秋"
+	}
+	{
+		"id": 6,
+		"course_id": 900001010,
+		"course_name": "军事理论",
+		"course_dpt": "武装部",
+		"score": 1,
+		"term": "1 秋"
+	}
+	{
+		"id": 7,
+		"course_id": 314030020,
+		"course_name": "新生专业研讨课(网络空间安全导论)",
+		"course_dpt": "网络空间安全学院",
+		"score": 1,
+		"term": "1 秋"
+	}
+	{
+		"id": 8,
+		"course_id": 912002010,
+		"course_name": "大学生心理健康",
+		"course_dpt": "心理健康中心",
+		"score": 1,
+		"term": "1 秋"
+	}
+	{
+		"id": 9,
+		"course_id": 201080030,
+		"course_name": "线性代数(理工)",
+		"course_dpt": "数学学院",
+		"score": 3,
+		"term": "1 秋"
+	}
+	{
+		"id": 10,
+		"course_id": 201137050,
+		"course_name": "微积分(1)-1",
+		"course_dpt": "数学学院",
+		"score": 5,
+		"term": "1 秋"
+	}
+	{
+		"id": 11,
+		"course_id": 314031030,
+		"course_name": "程序设计基础",
+		"course_dpt": "网络空间安全学院",
+		"score": 4,
+		"term": "1 秋"
+	}
+	{
+		"id": 12,
+		"course_id": 314032030,
+		"course_name": "计算机系统导论",
+		"course_dpt": "网络空间安全学院",
+		"score": 3,
+		"term": "1 秋"
+	}
+	{
+		"id": 13,
+		"course_id": 107060030,
+		"course_name": "中国近现代史纲要",
+		"course_dpt": "马克思主义学院",
+		"score": 3,
+		"term": "1 春"
+	}
+	{
+		"id": 14,
+		"course_id": 107116000,
+		"course_name": "形势与政策-2",
+		"course_dpt": "马克思主义学院",
+		"score": 0,
+		"term": "1 春"
+	}
+	{
+		"id": 15,
+		"course_id": 105368020,
+		"course_name": "大学英语(阅读与翻译)2",
+		"course_dpt": "外国语学院",
+		"score": 2,
+		"term": "1 春"
+	}
+	{
+		"id": 16,
+		"course_id": 105369010,
+		"course_name": "大学英语(语)-2",
+		"course_dpt": "外国语学院",
+		"score": 1,
+		"term": "1 春"
+	}
+	{
+		"id": 17,
+		"course_id": 888005010,
+		"course_name": "体育-2",
+		"course_dpt": "体育学院",
+		"score": 1,
+		"term": "1 春"
+	}
+	{
+		"id": 18,
+		"course_id": 201138040,
+		"course_name": "微积分(I)-2",
+		"course_dpt": "数学学院",
+		"score": 4,
+		"term": "1 春"
+	}
+	{
+		"id": 19,
+		"course_id": 201018030,
+		"course_name": "概率统计(理工)",
+		"course_dpt": "数学学院",
+		"score": 3,
+		"term": "1 春"
+	}
+	{
+		"id": 20,
+		"course_id": 202027020,
+		"course_name": "大学物理(理工)I-1",
+		"course_dpt": "物理学院",
+		"score": 2,
+		"term": "1 春"
+	}
+	{
+		"id": 21,
+		"course_id": 202041020,
+		"course_name": "大学物理实验(理工)III-1",
+		"course_dpt": "物理学院",
+		"score": 2,
+		"term": "1 春"
+	}
+	{
+		"id": 22,
+		"course_id": 905006020,
+		"course_name": "工程训练(I)",
+		"course_dpt": "工程训练中心",
+		"score": 2,
+		"term": "1 春"
+	}
+	{
+		"id": 23,
+		"course_id": 314034010,
+		"course_name": "网络安全管理与法律法规",
+		"course_dpt": "网络空间安全学院",
+		"score": 1,
+		"term": "1 春"
+	}
+

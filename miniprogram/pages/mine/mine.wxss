@@ -1,0 +1,62 @@
+/* pages/mine/mine.wxss */
+view.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*用户信息*/
+view.userInf{
+  height:26vh;
+  display: flex;
+  margin-left: 14rpx;
+  margin-right: 14rpx;
+  border-bottom: solid #DCDCDC 4rpx;
+}
+
+.userAvatarUrl{
+  width: 150rpx;
+  height:150rpx;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  overflow: hidden;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+}
+
+.userNickName{
+  font-size: 40rpx;
+  margin-top: 100rpx;
+  margin-left: 50rpx;
+}
+
+.ifAuthenticated{
+  color: red;
+  border: red 2rpx solid;
+  height: 40rpx;
+  margin-left: 200rpx;
+  margin-top: 100rpx;
+}
+
+/*我的商品，我的收藏，联系客服*/
+view.column{
+  height:10vh;
+  display: flex;
+  flex-direction: row;
+  margin-left: 14rpx;
+  margin-right: 14rpx;
+  padding: 10rpx 20rpx;
+  border-bottom: solid #DCDCDC 4rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column text{
+  font-size: 50rpx;
+}
+
+image.icons{
+  height: 90rpx;
+  width: 90rpx;
+}

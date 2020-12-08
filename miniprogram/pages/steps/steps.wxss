@@ -1,0 +1,84 @@
+/* miniprogram/pages/steps/steps.wxss */
+.cu-form-group .title {
+    min-width: calc(4em + 30rpx);
+  }
+  
+.nav-item {
+    width: 100rpx;
+    height: 100%;
+    display: inline-block;
+    font-size: 32rpx;
+}
+
+.nav-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4rpx;
+    box-sizing: border-box;
+}
+
+.fixed {
+    position: fixed;
+    width: 260px;
+    height: 60rpx;
+    background:#fff;
+    top: 20rpx;
+    z-index: 8;
+}
+
+.nofixed {
+    height: 91rpx;
+    width: 100%;
+    background: #fff;
+}
+
+.totop {
+    position: fixed;
+    left: 30rpx;
+    bottom: 80rpx;
+}
+
+.totop image {
+    width: 100rpx;
+    height: 100rpx;
+    z-index: 9;
+}
+.b_publish {
+    margin-top: 30rpx;
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fbbd08;
+    color: #fff;
+    border-radius: 40rpx;
+    letter-spacing: 4rpx;
+    font-size: 32rpx;
+    border: none;
+    font-weight: 500;
+}
+
+.b_card {
+    width: 100%;
+    padding: 40rpx 30rpx;
+    display: flex;
+    border-radius: 18rpx;
+    box-shadow: 0 0 20rpx #ebebeb;
+    flex-direction: column;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.kind_contain {
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    border-bottom: 1rpx solid #eee;
+    background:#fff;
+    align-items: center;
+    position: relative;
+}

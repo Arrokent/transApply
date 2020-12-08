@@ -1,0 +1,217 @@
+<wxs src="../../common.wxs" module="morejs" />
+<view class="top_steps">
+      <van-steps steps="{{ steps }}" active="{{ active }}" bindtap="swichstep" active-color="#000000" />
+</view>
+<view style="height:14.8px"></view>
+<!-- 步骤一 -->
+<van-transition show="{{ show_a }}" name="fade-right" custom-class="block" duration="{{entime}}">
+      <view class="b_card">
+            <form>
+                  <view class="cu-bar bg-white solid-bottom margin-top">
+                        <view class="action">
+                              <text class="cuIcon-title text-blue"></text>
+                              tip：已修的必修学分少于70%，将强制降级
+                        </view>
+                  </view>
+                  <!-- 学分进度条 -->
+                  <view class="{{scrollTop>310?'nofixed':''}}"></view>
+                  <view class="cu-form-group">
+                        <view class="cu-progress round {{scrollTop>310?'fixed':''}}">
+                              <view class="bg-blue" style="width:{{process+'%'}}; font-size:10px;">
+                                    {{process+'%'}}
+                              </view>
+                        </view>
+                  </view>
+                  <checkbox-group class="margin-top" bindchange="cal_score">
+                        <view class="cu-form-group margin-top round" wx:for="{{course_data}}" wx:key="id">
+                              <view class="title">{{item.course_name}}</view>
+                              <checkbox class="blue round" value="{{item.id}}" checked="{{item.check}}"></checkbox>
+                        </view>
+                  </checkbox-group>
+                  <view class="cu-form-group margin-top">
+                        <button class="cu-btn bg-blue margin-tb-sm round" bindtap="stepB">
+                              下一步
+                        </button>
+                  </view>
+            </form>
+      </view>
+</van-transition>
+<!-- 步骤二 -->
+<van-transition show="{{ show_b }}" name="fade-right" custom-class="block" duration="{{entime}}">
+      <view class="cu-form-group">必修学分低于70%，必须降级</view>
+      <view class="cu-form-group" wx:for="{{choose1}}" wx:key="id">
+            <view class="title">{{item.name}}</view>
+            <switch class="green sm" value="{{item.id}}" bindchange="get_will" checked="{{item.check}}"></switch>
+      </view>
+      <view class="cu-form-group margin-top">毕业去向</view>
+      <radio-group class="block" bindchange="opChange">
+            <view class="cu-form-group" wx:for="{{choose2}}" wx:key="id">
+                  <view class="title">{{item.name}}</view>
+                  <radio class="blue" value="{{item.id}}" checked="{{item.check}}"></radio>
+            </view>
+      </radio-group>
+      <view class="cu-form-group margin-top">
+            <button class="cu-btn bg-blue margin-tb-sm round" bindtap="stepC">下一步</button>
+      </view>
+</van-transition>
+<!-- 步骤三 -->
+<van-transition show="{{ show_c }}" name="fade-right" custom-class="block" duration="{{entime}}">
+      <form>
+            <view class="cu-form-group margin-top">
+                  <view class="title">姓名：</view>
+                  <input placeholder="请输入姓名" bindinput="getName"></input>
+            </view>
+            <view class="cu-form-group">
+                  <view class="title">学号：</view>
+                  <input placeholder="请输入学号" bindinput="getId"></input>
+            </view>
+            <view class="cu-form-group">
+                  <view class="title">电话：</view>
+                  <input placeholder="请输入电话" bindinput="getPhone"></input>
+            </view>
+            <view class="cu-form-group">
+                  <view class="title">身份证：</view>
+                  <input placeholder="请输入身份证号" bindinput="getCID"></input>
+            </view>
+            <view class="cu-form-group margin-top">
+                  <view class="title">年级</view>
+                  <picker bindchange="GdChange" value="{{gd_index}}" range="{{grade}}">
+                        <view class="picker">{{grade[gd_index]}}</view>
+                  </picker>
+            </view>
+            <view class="cu-form-group margin-top">
+                  <view class="title">所在学院</view>
+                  <picker bindchange="DptoutChange" value="{{dpout_index}}" range="{{dpt_out}}">
+                        <view class="picker">{{dpt_out[dpout_index]}}</view>
+                  </picker>
+            </view>
+            <view class="cu-form-group margin-top">
+                  <view class="title">想转学院</view>
+                  <picker bindchange="DptinChange" value="{{dpin_index}}" range="{{dpt_in}}">
+                        <view class="picker">{{dpt_in[dpin_index]}}</view>
+                  </picker>
+            </view>
+      </form>
+      <view class="cu-form-group margin-top">
+            <button class="cu-btn bg-blue margin-tb-sm round" bindtap="stepD">下一步</button>
+      </view>
+</van-transition>
+<!-- 步骤四 -->
+<van-transition show="{{ show_d }}" name="fade-right" custom-class="block" duration="{{entime}}">
+      <form>
+            <!-- <view class="cu-form-group margin-top">
+                  <view class="title">平均绩点：</view>
+                  <input placeholder="请在此输入平均绩点" bindinput="get4l"></input>
+            </view> -->
+            <view class="cu-bar bg-white solid-bottom margin-top">
+                  <view class="action">
+                        <text class="cuIcon-title text-blue"></text>
+                        转专业申报的要求是：
+                  </view>
+            </view>
+            <view class="cu-bar bg-white solid-bottom">
+                  <view class="action">
+                        <text class="cuIcon-title text-blue"></text>
+                        （1）必修课平均学分绩点3.40及以上(所有成绩均为第一次考试成绩)；
+                  </view>
+            </view>
+            <view class="cu-bar bg-white solid-bottom">
+                  <view class="action">
+                        <text class="cuIcon-title text-blue"></text>
+                        （1）必修课平均学分绩点3.40及以上(所有成绩均为第一次考试成绩)；
+                  </view>
+            </view>
+            <view class="cu-bar bg-white solid-bottom padding-bottom">
+                    <view class="action">
+                        <text class="cuIcon-title text-blue"></text>
+                        （3）确有专业方面特长的学生可不受此限制（需提交具有代表性的成果，如网络安全相关的发明专
+                        利、开发的网络安全相关软件、网络安全相关获奖证书、二名以上网络安全领域专家的推荐信等）
+                  </view>
+            </view>
+            <view style="height:16px"></view>
+            <van-cell center title="请输入平均绩点">
+                  <van-stepper value="{{ 3.0 }}" step="0.05" decimal-length="{{ 2 }}" bindchange="getpoint" />
+            </van-cell>
+            <view class="cu-bar bg-white">
+                  <view class="action">电子成绩单上传(必填)（pdf格式，通过综合教务系统学生端申请）</view>
+            </view>
+            <view class="cu-form-group">
+                  <view class="grid col-4 grid-square flex-sub">
+                        <view class="bg-img" wx:if="{{pdf_file.length>0}}">
+                              <!-- <image src='{{pdf_file[index]}}' mode='aspectFill'></image> -->
+                              <text>{{pdf_filename}}</text>
+                              <view class="cu-tag bg-red" catchtap="DelImg_pdf" data-index="{{index}}">
+                                    <text class="cuIcon-close"></text>
+                              </view>
+                        </view>
+                        <view class="solids" bindtap="ChoosePdf" wx:if="{{pdf_file.length<1}}">
+                              <text class="cuIcon-upload"></text>
+                        </view>
+                  </view>
+            </view>
+            <view class="cu-form-group margin-top">
+                  <view class="title">四级成绩(必填)：</view>
+                  <input placeholder="请在此输入四级分数" bindinput="get4l"></input>
+            </view>
+            <view class="cu-bar bg-white margin-top">
+                  <view class="action">四级证明图片上传(必填)（成绩单扫描件或网页查分截图均可）</view>
+            </view>
+            <view class="cu-form-group">
+                  <view class="grid col-4 grid-square flex-sub">
+                        <view class="bg-img" wx:for="{{img_4l}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{img_4l[index]}}">
+                              <image src='{{img_4l[index]}}' mode='aspectFill'></image>
+                              <view class="cu-tag bg-red" catchtap="DelImg_4l" data-index="{{index}}">
+                                    <text class="cuIcon-close"></text>
+                              </view>
+                        </view>
+                        <view class="solids" bindtap="ChooseImage_4l" wx:if="{{img_4l.length<1}}">
+                              <text class="cuIcon-cameraadd"></text>
+                        </view>
+                  </view>
+            </view>
+            <view class="cu-bar bg-white margin-top">
+                  <view class="action">其他获奖材料(选填)</view>
+                  <view class="action">{{img_other.length}}/4</view>
+            </view>
+            <view class="cu-form-group">
+                  <view class="grid col-4 grid-square flex-sub">
+                        <view class="bg-img" wx:for="{{img_other}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{img_other[index]}}">
+                              <image src='{{img_other[index]}}' mode='aspectFill'></image>
+                              <view class="cu-tag bg-red" catchtap="DelImg_ot" data-index="{{index}}">
+                                    <text class="cuIcon-close"></text>
+                              </view>
+                        </view>
+                        <view class="solids" bindtap="ChooseImage_ot" wx:if="{{img_other.length<4}}">
+                              <text class="cuIcon-cameraadd"></text>
+                        </view>
+                  </view>
+            </view>
+            <view class="cu-bar bg-white margin-top">
+                  <view class="action">特殊材料(可能必填)</view>
+                  <view class="action">{{img_special.length}}/4</view>
+            </view>
+            <view class="cu-form-group">
+                  <view class="grid col-4 grid-square flex-sub">
+                        <view class="bg-img" wx:for="{{img_special}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{img_special[index]}}">
+                              <image src='{{img_special[index]}}' mode='aspectFill'></image>
+                              <view class="cu-tag bg-red" catchtap="DelImg_sp" data-index="{{index}}">
+                                    <text class="cuIcon-close"></text>
+                              </view>
+                        </view>
+                        <view class="solids" bindtap="ChooseImage_sp" wx:if="{{img_special.length<4}}">
+                              <text class="cuIcon-cameraadd"></text>
+                        </view>
+                  </view>
+            </view>
+            <view class="padding flex flex-direction">
+                  <button class="cu-btn bg-blue margin-tb-sm lg" bindtap="release">提交</button>
+            </view>
+      </form>
+</van-transition>
+<!-- totop -->
+<van-transition show="{{ scrollTop>500 }}" custom-class="block" duration="600">
+      <view class="totop" bindtap="gotop">
+            <image lazy-load src="/images/top.png"></image>
+            <!-- <van-icon name="back-top" size="20px" /> -->
+      </view>
+</van-transition>
